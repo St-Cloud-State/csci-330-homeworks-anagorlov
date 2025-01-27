@@ -1,0 +1,128 @@
+2.2. Which of these are well-formed lists? That is, which ones have
+properly balanced parentheses?
+(A B (C) -- Missing parentheses at the end. Not well-formed.
+((A) (B)) -- Well-formed
+A B )(C D) -- Wrong order of parentheses. Not well-formed
+(A (B (C)) -- No closing parentheses. Not well-formed
+(A (B (C))) -- Well-formed
+(((A) (B)) (C)) -- Well-formed
+
+2.4
+((BOWS (ARROWS)) (FLOWERS (CHOCOLATES)))
+
+2.6
+() is for NIL
+(()) is for (NIL)
+(())) is for ((NIL))
+(()()) is for (NIL NIL)
+() (())) is for (NIL(NIL))
+
+2.13
+Write down tables similar to the one above to illustrate how to get to
+each word in the list (((FUN)) (IN THE) (SUN))
+Table for FUN
+Step.  Result. 
+start (((FUn)) (IN THE)(SUN))
+CAAR ((FUN))
+CAAAR (FUN)
+CAAAAR FUN
+
+Table for IN
+Step.  Result. 
+CADR ((IN THE)(SUN))
+CAADR (IN THE)
+CAAADR IN
+
+Table for THE
+Step. Result. 
+CADR ((IN THE )(SUN))
+CAADR (IN THE)
+CDAADR THE
+
+Table for SUN
+Step. Result.
+CADR ((IN THE)(SUN))
+CDADR (SUN)
+CADADR SUN
+
+2.15 Using the list ((A B) (C D) (E F)), fill in the missing parts of
+this table.
+
+Function -- Result
+CAR -- (A B)
+CDDR -- ((E F))
+CADR -- (C D)
+CDAR -- (B)
+CADAR -- B
+CDDAR -- ()
+CAAR -- A
+CDADDR -- (F)
+CADADR --  F
+
+2.16. What does CAAR do when given the input (FRED NIL)?
+It will most likely be an error because it will try to take the CAR of an (FRED). But FRED is an atom. 
+
+Sebesta Chapter 1 questions. 
+
+6. In what language is most of UNIX written?
+Unix is written in C programming language
+
+7. What is the disadvantage of having too many features in a language?
+It can be really complex, and hard to read. Having many features can also cam make it hard to learn the language.
+
+8. How can user-defined operator overloading harm the readability of a
+program?
+Inconsistency and maintenance could be diiicult. 
+
+9. What is one example of a lack of orthogonality in the design of C?
+That the arrays and pointers are closley related, but they are not interchangebale.
+
+10.What language used orthogonality as a primary design criterion?
+ALGOL 68
+
+11.What primitive control statement is used to build more complicated control
+statements in languages that lack them?
+The "goto"
+
+12.What does it mean for a program to be reliable?
+It means that the program is easy to read, it is consistent, has minimal or no bugs at all.
+
+13.Why is type checking the parameters of a subprogram important?
+It chatches the errors, and prevents type related bugs.
+
+14.What is aliasing?
+When more than two different identifiers refer to the same memory location.
+
+15.What is exception handling?
+This is a feature that deals with runtime errors aand exceptional conditions.
+
+16.Why is readability important to writability?
+Becuase overtime the code will need to be modified, and understood by others, code that can be reused makes it easier to spot bugs
+and errors.
+
+20. What are the three fundamental features of an object-oriented programming
+language?
+The main three features are Encapsulation, Inferitance, Polymorphism.
+
+21. What language was the first to support the three fundamental features of object-
+oriented programming?
+Simula
+
+22. What is an example of two language design criteria that are in direct conflict with
+each other?
+Readability and writability
+
+23. What are the three general methods of implementing a programming language?
+Compilation,  pure Interpretation, and Hybrid Implementation.
+
+24. Which produces faster program execution, a compiler or a pure interpreter?
+A complier would have faster program execution.
+
+25. What role does the symbol table play in a compiler?
+This is a data structure used by a complier to store information
+about the symbols in the source code.
+
+29. What are the advantages in implementing a language with a pure interpreter?
+It directly executes source code without compiling it into machine code.
+
+
