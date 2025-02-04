@@ -1,0 +1,498 @@
+Script started on 2025-02-04 20:29:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="100" LINES="15"]
+[0;32m@anagorlov [0m➜ [1;34m/workspaces/csci-330-homeworks-anagorlov/Hwork2 [0;36m([1;31mmain[0;36m) [0m$ sbcl
+This is SBCL 2.0.1.debian, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* ( (NOT (EQUAL 30 ) (ABS-3)))
+
+debugger invoked on a SB-INT:SIMPLE-PROGRAM-ERROR in thread
+#<THREAD "main thread" RUNNING {1000560083}>:
+  invalid number of arguments: 1
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [REPLACE-FUNCTION] Call a different function with the same arguments
+  1: [CALL-FORM       ] Call a different form
+  2: [ABORT           ] Exit debugger, returning to top level.
+
+(EQUAL 3) [external]
+0] (NOT (EQUAL 3 (ABS -33)  )))
+
+NIL
+0] (/ + 8 12) 2)
+
+
+debugger invoked on a TYPE-ERROR in thread
+#<THREAD "main thread" RUNNING {1000560083}>:
+  The value
+    (NOT (EQUAL 3 (ABS -3)))
+  is not of type
+    NUMBER
+  when binding SB-KERNEL::X
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT           ] Reduce debugger level (to debug level 1).
+  1: [REPLACE-FUNCTION] Call a different function with the same arguments
+  2: [CALL-FORM       ] Call a different form
+  3:                    Exit debugger, returning to top level.
+
+(SB-KERNEL:TWO-ARG-/ (NOT (EQUAL 3 (ABS -3))) 96) [external]
+0[2] (/ (+ 8 12) 2)
+
+10
+0[2] (+ (* 3 3) (* 4 4))
+
+25
+0[2] (defun miles-per-gallon (initial-odometer-reading final-odometer-reading gallons-consumed)
+  (/ (- final-odometer-reading initial-odometer-reading) gallons-consumed))
+
+MILES-PER-GALLON
+0[2] 
+(third '(the quick brown fox))
+
+BROWN
+0[2] (list 2 'and 2 'is 4)
+
+(2 AND 2 IS 4)
+0[2] (+ 1 '(lengh th (list t t t t )  )))
+; in: NOT (EQUAL 3)
+;     (+ 1 '(LENGTH (LIST T T T T)))
+; 
+; caught WARNING:
+;   Constant (LENGTH (LIST T T T T)) conflicts with its asserted type NUMBER.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+debugger invoked on a SIMPLE-TYPE-ERROR in thread
+#<THREAD "main thread" RUNNING {1000560083}>:
+  Value of '(LENGTH (LIST T T T T)) in
+  (+ 1 '(LENGTH (LIST T T T T)))
+  is
+    (LENGTH (LIST T T T T)),
+  not a
+    NUMBER.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT           ] Reduce debugger level (to debug level 2).
+  1:                    Reduce debugger level (to debug level 1).
+  2: [REPLACE-FUNCTION] Call a different function with the same arguments
+  3: [CALL-FORM       ] Call a different form
+  4:                    Exit debugger, returning to top level.
+
+(SB-C::%COMPILE-TIME-TYPE-ERROR ((LENGTH (LIST T T T T))) NUMBER #<unused argument> ((QUOTE (LENGTH (LIST T T T T)))) "(+ 1 '(LENGTH (LIST T T T T)))" NIL)
+0[3] (+ 1 '(length (list t t t t)))
+; in: NOT (EQUAL 3)
+;     (+ 1 '(LENGTH (LIST T T T T)))
+; 
+; caught WARNING:
+;   Constant (LENGTH (LIST T T T T)) conflicts with its asserted type NUMBER.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+debugger invoked on a SIMPLE-TYPE-ERROR in thread
+#<THREAD "main thread" RUNNING {1000560083}>:
+  Value of '(LENGTH (LIST T T T T)) in
+  (+ 1 '(LENGTH (LIST T T T T)))
+  is
+    (LENGTH (LIST T T T T)),
+  not a
+    NUMBER.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT           ] Reduce debugger level (to debug level 3).
+  1:                    Reduce debugger level (to debug level 2).
+  2:                    Reduce debugger level (to debug level 1).
+  3: [REPLACE-FUNCTION] Call a different function with the same arguments
+  4: [CALL-FORM       ] Call a different form
+  5:                    Exit debugger, returning to top level.
+
+(SB-C::%COMPILE-TIME-TYPE-ERROR ((LENGTH (LIST T T T T))) NUMBER #<unused argument> ((QUOTE (LENGTH (LIST T T T T)))) "(+ 1 '(LENGTH (LIST T T T T)))" NIL)
+0[4] (cons 'patrick '(seymour marvin)0 )
+
+(PATRICK SEYMOUR MARVIN)
+0[4] (cons 'patrick (list 'seymour 'marvin))
+
+(PATRICK SEYMOUR MARVIN)
+0[4] (mystery '(dancing bear))
+; in: NOT (EQUAL 3)
+;     (MYSTERY '(DANCING BEAR))
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::MYSTERY
+; 
+; compilation unit finished
+;   Undefined function:
+;     MYSTERY
+;   caught 1 STYLE-WARNING condition
+
+debugger invoked on a UNDEFINED-FUNCTION in thread
+#<THREAD "main thread" RUNNING {1000560083}>:
+  The function COMMON-LISP-USER::MYSTERY is undefined.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE        ] Retry calling MYSTERY.
+  1: [USE-VALUE       ] Call specified function.
+  2: [RETURN-VALUE    ] Return specified values.
+  3: [RETURN-NOTHING  ] Return zero values.
+  4: [ABORT           ] Reduce debugger level (to debug level 4).
+  5:                    Reduce debugger level (to debug level 3).
+  6:                    Reduce debugger level (to debug level 2).
+  7:                    Reduce debugger level (to debug level 1).
+  8: [REPLACE-FUNCTION] Call a different function with the same arguments
+  9: [CALL-FORM       ] Call a different form
+ 10:                    Exit debugger, returning to top level.
+
+("undefined function" (DANCING BEAR))
+0[5] defun     (defun mystery (x)
+(liss t (second x) (firstx))    x)))
+; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
+MYSTERY
+0[5] (mystery '(dab ncing bear))
+; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
+(BEAR DANCING)
+0[5] (mystery 'dancing 'bear
+)
+; No debug variables for current frame: using EVAL instead of EVAL-IN-FRAME.
+
+debugger invoked on a SB-INT:SIMPLE-PROGRAM-ERROR in thread
+#<THREAD "main thread" RUNNING {1000560083}>:
+  invalid number of arguments: 2
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [REPLACE-FUNCTION] Call a different function with the same arguments
+  1: [CALL-FORM       ] Call a different form
+  2: [ABORT           ] Reduce debugger level (to debug level 5).
+  3:                    Reduce debugger level (to debug level 4).
+  4:                    Reduce debugger level (to debug level 3).
+  5:                    Reduce debugger level (to debug level 2).
+  6:                    Reduce debugger level (to debug level 1).
+  7:                    Call a different function with the same arguments
+  8:                    Call a different form
+  9:                    Exit debugger, returning to top level.
+
+(MYSTERY DANCING BEAR) [external]
+   source: (SB-INT:NAMED-LAMBDA MYSTERY
+               (X)
+             (BLOCK MYSTERY (LIST (SECOND X) (FIRST X))))
+0[6] (mystery 'dancing 'bear)
+; in: MYSTERY 'DANCING
+;     (MYSTERY 'DANCING 'BEAR)
+; 
+; caught STYLE-WARNING:
+;   The function MYSTERY is called with two arguments, but wants exactly one.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+Help! 11 nested errors. SB-KERNEL:*MAXIMUM-ERROR-DEPTH* exceeded.
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1000560083}>
+0: (MYSTERY DANCING BEAR) [external]
+1: (SB-INT:SIMPLE-EVAL-IN-LEXENV (MYSTERY (QUOTE DANCING) (QUOTE BEAR)) #<NULL-LEXENV>)
+2: (EVAL (MYSTERY (QUOTE DANCING) (QUOTE BEAR)))
+3: (INTERACTIVE-EVAL (MYSTERY (QUOTE DANCING) (QUOTE BEAR)) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+4: (SB-DEBUG::DEBUG-EVAL-PRINT (MYSTERY (QUOTE DANCING) (QUOTE BEAR)))
+5: (SB-DEBUG::DEBUG-LOOP-FUN)
+6: (INTERNAL-DEBUG)
+7: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+8: (SB-DEBUG::%INVOKE-DEBUGGER #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+9: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+10: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {74378062421B}>)
+11: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+12: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {7437806242EB}>)
+13: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+14: (INVOKE-DEBUGGER #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+15: (ERROR #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+16: (SB-KERNEL:WITH-SIMPLE-CONDITION-RESTARTS ERROR NIL #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+17: ((LABELS SB-KERNEL::TRY :IN SB-KERNEL::RESTART-UNDEFINED) #<UNDEFINED-FUNCTION MYSTERY {10019984C3}> NIL)
+18: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #X743780624900) #<unused argument>)
+19: ("foreign function: call_into_lisp")
+20: ("foreign function: funcall2")
+21: ("foreign function: interrupt_internal_error")
+22: ("foreign function: handle_trap")
+23: ("foreign function: #x418812")
+24: ("undefined function")
+25: (INTERACTIVE-EVAL (MYSTERY (QUOTE (DANCING BEAR))) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+26: (SB-DEBUG::DEBUG-EVAL-PRINT (MYSTERY (QUOTE (DANCING BEAR))))
+27: (SB-DEBUG::DEBUG-LOOP-FUN)
+28: (INTERNAL-DEBUG)
+29: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+30: (SB-DEBUG::%INVOKE-DEBUGGER #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+31: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+32: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {74378062529B}>)
+33: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+34: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {74378062536B}>)
+35: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+36: (INVOKE-DEBUGGER #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+37: (ERROR SIMPLE-TYPE-ERROR :DATUM (LENGTH (LIST T T T T)) :EXPECTED-TYPE NUMBER :FORMAT-CONTROL #<SB-FORMAT::FMT-CONTROL "~@<Value of ~S in ~_~A ~I~_is ~2I~_~S, ~I~_not a ~2I~_~/SB-IMPL:PRINT-TYPE-SPECIFIER/.~:@>"> :FORMAT-ARGUMENTS ((QUOTE #1=(LENGTH (LIST T T T T))) "(+ 1 '(LENGTH (LIST T T T T)))" #1# NUMBER))
+38: (SB-C::%COMPILE-TIME-TYPE-ERROR ((LENGTH (LIST T T T T))) NUMBER #<unused argument> ((QUOTE (LENGTH (LIST T T T T)))) "(+ 1 '(LENGTH (LIST T T T T)))" NIL)
+39: ((LAMBDA (#:G377)) #<unused argument>)
+40: (INTERACTIVE-EVAL (+ 1 (QUOTE (LENGTH (LIST T T T T)))) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+41: (SB-DEBUG::DEBUG-EVAL-PRINT (+ 1 (QUOTE (LENGTH (LIST T T T T)))))
+42: (SB-DEBUG::DEBUG-LOOP-FUN)
+43: (INTERNAL-DEBUG)
+44: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+45: (SB-DEBUG::%INVOKE-DEBUGGER #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+46: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+47: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {7437806258DB}>)
+48: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+49: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {7437806259AB}>)
+50: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+51: (INVOKE-DEBUGGER #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+52: (ERROR SIMPLE-TYPE-ERROR :DATUM (LENGTH (LIST T T T T)) :EXPECTED-TYPE NUMBER :FORMAT-CONTROL #<SB-FORMAT::FMT-CONTROL "~@<Value of ~S in ~_~A ~I~_is ~2I~_~S, ~I~_not a ~2I~_~/SB-IMPL:PRINT-TYPE-SPECIFIER/.~:@>"> :FORMAT-ARGUMENTS ((QUOTE #1=(LENGTH (LIST T T T T))) "(+ 1 '(LENGTH (LIST T T T T)))" #1# NUMBER))
+53: (SB-C::%COMPILE-TIME-TYPE-ERROR ((LENGTH (LIST T T T T))) NUMBER #<unused argument> ((QUOTE (LENGTH (LIST T T T T)))) "(+ 1 '(LENGTH (LIST T T T T)))" NIL)
+54: ((LAMBDA (#:G376)) #<unused argument>)
+55: (INTERACTIVE-EVAL (+ 1 (QUOTE (LENGTH (LIST T T T T)))) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+56: (SB-DEBUG::DEBUG-EVAL-PRINT (+ 1 (QUOTE (LENGTH (LIST T T T T)))))
+57: (SB-DEBUG::DEBUG-LOOP-FUN)
+58: (INTERNAL-DEBUG)
+59: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+60: (SB-DEBUG::%INVOKE-DEBUGGER #<TYPE-ERROR expected-type: NUMBER datum: (NOT (EQUAL 3 (ABS -3)))>)
+61: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+62: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {743780625F1B}>)
+63: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+64: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {743780625FEB}>)
+65: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<TYPE-ERROR expected-type: NUMBER datum: (NOT (EQUAL 3 (ABS -3)))>)
+66: (INVOKE-DEBUGGER #<TYPE-ERROR expected-type: NUMBER datum: (NOT (EQUAL 3 (ABS -3)))>)
+67: (ERROR TYPE-ERROR :DATUM (NOT (EQUAL 3 (ABS -3))) :EXPECTED-TYPE NUMBER :CONTEXT SB-KERNEL::X)
+68: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #X7437806262C0) #<unused argument>)
+69: ("foreign function: call_into_lisp")
+70: ("foreign function: funcall2")
+71: ("foreign function: interrupt_internal_error")
+72: ("foreign function: handle_trap")
+73: ("foreign function: #x418812")
+74: (SB-KERNEL:TWO-ARG-/ (NOT (EQUAL 3 (ABS -3))) 96) [external]
+75: (INTERACTIVE-EVAL (/ + 8 12) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+76: (SB-DEBUG::DEBUG-EVAL-PRINT (/ + 8 12))
+77: (SB-DEBUG::DEBUG-LOOP-FUN)
+78: (INTERNAL-DEBUG)
+79: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+80: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {100183A203}>)
+81: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+82: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {743780626CDB}>)
+83: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+84: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {743780626DAB}>)
+85: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {100183A203}>)
+86: (INVOKE-DEBUGGER #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {100183A203}>)
+87: (ERROR #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {100183A203}>)
+88: (SB-INT:%PROGRAM-ERROR "invalid number of arguments: ~S" 1)
+89: ("INVALID-ARG-COUNT-ERROR" 1)
+90: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #X7437806271C0) #<unused argument>)
+91: ("foreign function: call_into_lisp")
+92: ("foreign function: funcall2")
+93: ("foreign function: interrupt_internal_error")
+94: ("foreign function: handle_trap")
+95: ("foreign function: #x418812")
+96: (EQUAL 3) [external]
+97: (SB-INT:SIMPLE-EVAL-IN-LEXENV (EQUAL 3) #<NULL-LEXENV>)
+98: (SB-INT:SIMPLE-EVAL-IN-LEXENV (NOT (EQUAL 3) (ABS-3)) #<NULL-LEXENV>)
+99: (EVAL (NOT (EQUAL 3) (ABS-3)))
+100: (INTERACTIVE-EVAL (NOT (EQUAL 3) (ABS-3)) :EVAL NIL)
+101: (SB-IMPL::REPL-FUN NIL)
+102: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;TOPLEVEL.LISP"))
+103: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;TOPLEVEL.LISP") {743780627B7B}>)
+104: (SB-IMPL::TOPLEVEL-REPL NIL)
+105: (SB-IMPL::TOPLEVEL-INIT)
+106: ((FLET SB-UNIX::BODY :IN SAVE-LISP-AND-DIE))
+107: ((FLET "WITHOUT-INTERRUPTS-BODY-14" :IN SAVE-LISP-AND-DIE))
+108: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+debugger invoked on a SIMPLE-ERROR in thread #<THREAD "main thread" RUNNING {1000560083}>: Maximum error nesting depth exceeded
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [REPLACE-FUNCTION] Call a different function with the same arguments
+  1: [CALL-FORM       ] Call a different form
+  2: [ABORT           ] Reduce debugger level (to debug level 6).
+  3:                    Call a different function with the same arguments
+  4:                    Call a different form
+  5:                    Reduce debugger level (to debug level 5).
+  6:                    Reduce debugger level (to debug level 4).
+  7:                    Reduce debugger level (to debug level 3).
+  8:                    Reduce debugger level (to debug level 2).
+  9:                    Reduce debugger level (to debug level 1).
+ 10:                    Call a different function with the same arguments
+ 11:                    Call a different form
+ 12:                    Exit debugger, returning to top level.
+
+(MYSTERY DANCING BEAR) [external]
+   source: (SB-INT:NAMED-LAMBDA MYSTERY (X) (BLOCK MYSTERY (LIST (SECOND X) (FIRST X))))
+0[7] (list 'cons t nil)
+
+(CONS T NIL)
+0[7] (eval (list 'cons t nil))
+
+(T)
+0[7] (eval (eva; l (list 'cons t nil)))
+Help! ERROR-ERROR is 2 levels deep. Will try to reset the IO streams and disable debugger hooks.
+Help! 11 nested errors. SB-KERNEL:*MAXIMUM-ERROR-DEPTH* exceeded.
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1000560083}>
+0: (MYSTERY DANCING BEAR) [external]
+1: (INTERACTIVE-EVAL (MYSTERY (QUOTE DANCING) (QUOTE BEAR)) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+2: (SB-DEBUG::DEBUG-EVAL-PRINT (MYSTERY (QUOTE DANCING) (QUOTE BEAR)))
+3: (SB-DEBUG::DEBUG-LOOP-FUN)
+4: (INTERNAL-DEBUG)
+5: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+6: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {10019CF9A3}>)
+7: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+8: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {74378062329B}>)
+9: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+10: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {74378062336B}>)
+11: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {10019CF9A3}>)
+12: (INVOKE-DEBUGGER #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {10019CF9A3}>)
+13: (ERROR #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {10019CF9A3}>)
+14: (SB-INT:%PROGRAM-ERROR "invalid number of arguments: ~S" 2)
+15: ("INVALID-ARG-COUNT-ERROR" 2)
+16: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #X743780623780) #<unused argument>)
+17: ("foreign function: call_into_lisp")
+18: ("foreign function: funcall2")
+19: ("foreign function: interrupt_internal_error")
+20: ("foreign function: handle_trap")
+21: ("foreign function: #x418812")
+22: (MYSTERY DANCING BEAR) [external]
+23: (SB-INT:SIMPLE-EVAL-IN-LEXENV (MYSTERY (QUOTE DANCING) (QUOTE BEAR)) #<NULL-LEXENV>)
+24: (EVAL (MYSTERY (QUOTE DANCING) (QUOTE BEAR)))
+25: (INTERACTIVE-EVAL (MYSTERY (QUOTE DANCING) (QUOTE BEAR)) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+26: (SB-DEBUG::DEBUG-EVAL-PRINT (MYSTERY (QUOTE DANCING) (QUOTE BEAR)))
+27: (SB-DEBUG::DEBUG-LOOP-FUN)
+28: (INTERNAL-DEBUG)
+29: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+30: (SB-DEBUG::%INVOKE-DEBUGGER #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+31: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+32: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {74378062421B}>)
+33: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+34: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {7437806242EB}>)
+35: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+36: (INVOKE-DEBUGGER #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+37: (ERROR #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+38: (SB-KERNEL:WITH-SIMPLE-CONDITION-RESTARTS ERROR NIL #<UNDEFINED-FUNCTION MYSTERY {10019984C3}>)
+39: ((LABELS SB-KERNEL::TRY :IN SB-KERNEL::RESTART-UNDEFINED) #<UNDEFINED-FUNCTION MYSTERY {10019984C3}> NIL)
+40: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #X743780624900) #<unused argument>)
+41: ("foreign function: call_into_lisp")
+42: ("foreign function: funcall2")
+43: ("foreign function: interrupt_internal_error")
+44: ("foreign function: handle_trap")
+45: ("foreign function: #x418812")
+46: ("undefined function")
+47: (INTERACTIVE-EVAL (MYSTERY (QUOTE (DANCING BEAR))) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+48: (SB-DEBUG::DEBUG-EVAL-PRINT (MYSTERY (QUOTE (DANCING BEAR))))
+49: (SB-DEBUG::DEBUG-LOOP-FUN)
+50: (INTERNAL-DEBUG)
+51: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+52: (SB-DEBUG::%INVOKE-DEBUGGER #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+53: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+54: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {74378062529B}>)
+55: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+56: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {74378062536B}>)
+57: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+58: (INVOKE-DEBUGGER #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+59: (ERROR SIMPLE-TYPE-ERROR :DATUM (LENGTH (LIST T T T T)) :EXPECTED-TYPE NUMBER :FORMAT-CONTROL #<SB-FORMAT::FMT-CONTROL "~@<Value of ~S in ~_~A ~I~_is ~2I~_~S, ~I~_not a ~2I~_~/SB-IMPL:PRINT-TYPE-SPECIFIER/.~:@>"> :FORMAT-ARGUMENTS ((QUOTE #1=(LENGTH (LIST T T T T))) "(+ 1 '(LENGTH (LIST T T T T)))" #1# NUMBER))
+60: (SB-C::%COMPILE-TIME-TYPE-ERROR ((LENGTH (LIST T T T T))) NUMBER #<unused argument> ((QUOTE (LENGTH (LIST T T T T)))) "(+ 1 '(LENGTH (LIST T T T T)))" NIL)
+61: ((LAMBDA (#:G377)) #<unused argument>)
+62: (INTERACTIVE-EVAL (+ 1 (QUOTE (LENGTH (LIST T T T T)))) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+63: (SB-DEBUG::DEBUG-EVAL-PRINT (+ 1 (QUOTE (LENGTH (LIST T T T T)))))
+64: (SB-DEBUG::DEBUG-LOOP-FUN)
+65: (INTERNAL-DEBUG)
+66: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+67: (SB-DEBUG::%INVOKE-DEBUGGER #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+68: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+69: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {7437806258DB}>)
+70: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+71: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {7437806259AB}>)
+72: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+73: (INVOKE-DEBUGGER #<SIMPLE-TYPE-ERROR expected-type: NUMBER datum: (LENGTH (LIST T T T T))>)
+74: (ERROR SIMPLE-TYPE-ERROR :DATUM (LENGTH (LIST T T T T)) :EXPECTED-TYPE NUMBER :FORMAT-CONTROL #<SB-FORMAT::FMT-CONTROL "~@<Value of ~S in ~_~A ~I~_is ~2I~_~S, ~I~_not a ~2I~_~/SB-IMPL:PRINT-TYPE-SPECIFIER/.~:@>"> :FORMAT-ARGUMENTS ((QUOTE #1=(LENGTH (LIST T T T T))) "(+ 1 '(LENGTH (LIST T T T T)))" #1# NUMBER))
+75: (SB-C::%COMPILE-TIME-TYPE-ERROR ((LENGTH (LIST T T T T))) NUMBER #<unused argument> ((QUOTE (LENGTH (LIST T T T T)))) "(+ 1 '(LENGTH (LIST T T T T)))" NIL)
+76: ((LAMBDA (#:G376)) #<unused argument>)
+77: (INTERACTIVE-EVAL (+ 1 (QUOTE (LENGTH (LIST T T T T)))) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+78: (SB-DEBUG::DEBUG-EVAL-PRINT (+ 1 (QUOTE (LENGTH (LIST T T T T)))))
+79: (SB-DEBUG::DEBUG-LOOP-FUN)
+80: (INTERNAL-DEBUG)
+81: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+82: (SB-DEBUG::%INVOKE-DEBUGGER #<TYPE-ERROR expected-type: NUMBER datum: (NOT (EQUAL 3 (ABS -3)))>)
+83: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+84: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {743780625F1B}>)
+85: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+86: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {743780625FEB}>)
+87: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<TYPE-ERROR expected-type: NUMBER datum: (NOT (EQUAL 3 (ABS -3)))>)
+88: (INVOKE-DEBUGGER #<TYPE-ERROR expected-type: NUMBER datum: (NOT (EQUAL 3 (ABS -3)))>)
+89: (ERROR TYPE-ERROR :DATUM (NOT (EQUAL 3 (ABS -3))) :EXPECTED-TYPE NUMBER :CONTEXT SB-KERNEL::X)
+90: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #X7437806262C0) #<unused argument>)
+91: ("foreign function: call_into_lisp")
+92: ("foreign function: funcall2")
+93: ("foreign function: interrupt_internal_error")
+94: ("foreign function: handle_trap")
+95: ("foreign function: #x418812")
+96: (SB-KERNEL:TWO-ARG-/ (NOT (EQUAL 3 (ABS -3))) 96) [external]
+97: (INTERACTIVE-EVAL (/ + 8 12) :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+98: (SB-DEBUG::DEBUG-EVAL-PRINT (/ + 8 12))
+99: (SB-DEBUG::DEBUG-LOOP-FUN)
+100: (INTERNAL-DEBUG)
+101: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+102: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {100183A203}>)
+103: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP"))
+104: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;DEBUG.LISP") {743780626CDB}>)
+105: ((FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+106: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {743780626DAB}>)
+107: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {100183A203}>)
+108: (INVOKE-DEBUGGER #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {100183A203}>)
+109: (ERROR #<SB-INT:SIMPLE-PROGRAM-ERROR "invalid number of arguments: ~S" {100183A203}>)
+110: (SB-INT:%PROGRAM-ERROR "invalid number of arguments: ~S" 1)
+111: ("INVALID-ARG-COUNT-ERROR" 1)
+112: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #X7437806271C0) #<unused argument>)
+113: ("foreign function: call_into_lisp")
+114: ("foreign function: funcall2")
+115: ("foreign function: interrupt_internal_error")
+116: ("foreign function: handle_trap")
+117: ("foreign function: #x418812")
+118: (EQUAL 3) [external]
+119: (SB-INT:SIMPLE-EVAL-IN-LEXENV (EQUAL 3) #<NULL-LEXENV>)
+120: (SB-INT:SIMPLE-EVAL-IN-LEXENV (NOT (EQUAL 3) (ABS-3)) #<NULL-LEXENV>)
+121: (EVAL (NOT (EQUAL 3) (ABS-3)))
+122: (INTERACTIVE-EVAL (NOT (EQUAL 3) (ABS-3)) :EVAL NIL)
+123: (SB-IMPL::REPL-FUN NIL)
+124: ((FLET "LAMBDA0" :IN "SYS:SRC;CODE;TOPLEVEL.LISP"))
+125: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (FLET "LAMBDA0" :IN "SYS:SRC;CODE;TOPLEVEL.LISP") {743780627B7B}>)
+126: (SB-IMPL::TOPLEVEL-REPL NIL)
+127: (SB-IMPL::TOPLEVEL-INIT)
+128: ((FLET SB-UNIX::BODY :IN SAVE-LISP-AND-DIE))
+129: ((FLET "WITHOUT-INTERRUPTS-BODY-14" :IN SAVE-LISP-AND-DIE))
+130: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+debugger invoked on a SIMPLE-ERROR in thread #<THREAD "main thread" RUNNING {1000560083}>: Maximum error nesting depth exceeded
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT           ] Reduce debugger level (to debug level 7).
+  1: [REPLACE-FUNCTION] Call a different function with the same arguments
+  2: [CALL-FORM       ] Call a different form
+  3:                    Reduce debugger level (to debug level 6).
+  4:                    Call a different function with the same arguments
+  5:                    Call a different form
+  6:                    Reduce debugger level (to debug level 5).
+  7:                    Reduce debugger level (to debug level 4).
+  8:                    Reduce debugger level (to debug level 3).
+  9:                    Reduce debugger level (to debug level 2).
+ 10:                    Reduce debugger level (to debug level 1).
+ 11:                    Call a different function with the same ar
